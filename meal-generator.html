@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Meal Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="meal-generator">
+    <div class="container">
+        <h1 class="main-title">Gourmet Meal Generator</h1>
+        <div class="meal-wrapper">
+            <div class="home-button-container">
+                <a href="index.html" class="button home-button">
+                    <span class="button-text">Home</span>
+                </a>
+            </div>
+            <div id="meal-container" class="meal-container">
+                <h2 id="meal-name" class="meal-name"></h2>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                </select>
+                <img id="meal-image" alt="Meal image" class="meal-image">
+                <div class="meal-details">
+                    <h3>Ingredients:</h3>
+                    <ul id="ingredients"></ul>
+                    <h3>Instructions:</h3>
+                    <ol id="instructions"></ol>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="save" class="button">
+                <span class="button-text">Save</span>
+            </button>
+            <button id="next" class="button">
+                <span class="button-text">Next</span>
+            </button>
+        </div>
+        <div id="loading" class="loading">Loading recipe...</div>
+    </div>
+
+    <div id="pdf-content" class="pdf-content">
+        <h2 id="pdf-meal-name"></h2>
+        <h3>Ingredients:</h3>
+        <ul id="pdf-ingredients"></ul>
+        <h3>Instructions:</h3>
+        <ol id="pdf-instructions"></ol>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
